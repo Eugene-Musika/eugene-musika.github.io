@@ -1,6 +1,6 @@
 # Kiki test web-site
 
-You could find compiled project for production at **dist** folder.
+You could find compiled project for production at **"/dist"** folder.
 
 To compile project from sources you need:
 
