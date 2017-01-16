@@ -1,0 +1,329 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Genesis test task</title>
+		<meta name="description" content="Email tempate for dating service">
+		<meta name="keywords" content="">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+	</head>
+	<body>
+
+		
+		
+		<header class="header">
+			<div class="row header-wrap">
+				<a class="header__logo col-3 col-sm-2 icon icon-logo" href="#"></a>
+		
+				<div class="hamburger-button">
+					<input type="checkbox" id="nav-menu-mobile-button"/>
+					<label for="nav-menu-mobile-button" class="hamburger-menu">
+						<div class="hamburger-bar"></div>
+					</label>
+				</div>
+		
+				<div class="top-menu js_top-menu">
+					<ul class="top-menu__info">
+						<li class="top-menu__info-item">
+							Пробный аккаунт <a class="top-menu__info-link icon icon-question-mark" href="#"></a>
+						</li>
+						<li class="top-menu__info-item">
+							<span class="menu-sec-item">Баланс: </span>100 руб. <a href="#" class="top-menu__info-link icon icon-plus"></a>
+						</li>
+						<li class="top-menu__info-item">
+							<div class="top-menu__user">
+								<a class="top-menu__user-img-link" href="#">
+									<img src="assets/img/png/avatar.png" alt="User image" class="top-menu__user-img">
+								</a>
+								<span class="top-menu__user-description menu-sec-item">
+									Пантелеймон <a href="#" class="top-menu__info-link"><i class="icon icon-chevron-down"></i></a>
+								</span>
+							</div>
+						</li>
+					</ul>
+		
+					<nav class="top-menu__nav" role="navigation">
+						<ul class="top-menu__nav-list">
+							<li class="top-menu__nav-item"><a href="#" class="top-menu__nav-link is-active">Поиск</a></li>
+							<li class="top-menu__nav-item"><a href="#" class="top-menu__nav-link">Мои переписки</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+		
+		<main class="main">
+			<form action="#" name="filterSearch" class="filter row">
+				<div class="offset-lg-1 col-md-2 col-sm-4 filter__item">
+					<div class="filter__gender dropdown js_dropdown">
+						<div class="dropdown__viewbox filter__text-input">
+							<span class="dropdown__viewbox-text js_dropdown-text">Девушку</span>
+							<span class="filter__text-icon dropdown__icon icon icon-chevron-down-big"></span>
+						</div>
+					
+						<ul class="dropdown__items js_dropdown-list">
+							<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="gender" value="f" checked>Девушку</label></li>
+							<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="gender" value="m">Парня</label></li>
+						</ul>
+					</div>
+				</div>
+			
+				<div class="filter__location col-lg-3 col-md-4 col-sm-8 filter__item">
+					<span class="input-reset-wrap">
+						<input type="text" class="filter__text-input input-reset__target js_input-reset__target filter__location-input" name="location" placeholder="Город, Страна" maxlength="30">
+						<button class="input-reset js_input-reset icon icon-cross"></button>
+					</span>
+				</div>
+			
+				<div class="filter__divider filter__divider--small"></div>
+			
+				<div class="filter__age col-lg-3 col-md-4 col-sm-7 filter__item">
+					Возраст
+					<input type="tel" name="minAge" class="filter__text-input filter__age-input" placeholder="от" pattern="\d+" maxlength="2">
+					<input type="tel" name="maxAge" class="filter__text-input filter__age-input" placeholder="до" pattern="\d+" maxlength="2">
+				</div>
+			
+				<div class="filter__submit col-md-2 col-sm-5 filter__item">
+					<input type="submit" value="Найти" class="filter__submit-btn btn btn--main">
+				</div>
+				
+				<div class="filter__divider filter__divider--large"></div>
+			
+				<div class="col-md-3 col-sm-8 filter__item">
+					<div class="filter__period">
+						<input type="radio" name="period" value="all" id="allPeriod" class="js_period-toggle" checked>
+						<label for="allPeriod" class="filter__period-toggle">Все</label>
+			
+						<input type="radio" name="period" value="new" id="newPeriod" class="js_period-toggle">
+						<label for="newPeriod" class="filter__period-toggle">Новые</label>
+					</div>
+				</div>
+			
+				<div class="col-md-2 col-sm-4 filter__item">
+					<div class="filter__period-more js_period-more dropdown js_dropdown">
+						<div class="dropdown__viewbox filter__text-input">
+							<span class="dropdown__viewbox-text js_dropdown-text">За сутки</span>
+							<span class="filter__text-icon dropdown__icon icon icon-chevron-down-big"></span>
+						</div>
+			
+						<ul class="dropdown__items js_dropdown-list">
+							<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="periodMore" value="d" checked>За сутки</label></li>
+							<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="periodMore" value="w">За неделю</label></li>
+							<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="periodMore" value="m">За месяц</label></li>
+						</ul>
+					</div>
+				</div>
+			
+				<div class="filter__divider filter__divider--small"></div>
+			
+				<div class="filter__message-box col-md-7 filter__item">
+					<div class="filter__message">По вашему запросу никого не найдено, посмотрите пользователей которые могут вам понравиться</div>
+				</div>
+			</form>
+			
+			<section class="gallery">
+				<div class="row">
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card card--top">
+							<div class="card__top-label is-active">ТОП</div>
+						
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-1.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">12</a>
+									<div class="card__status is-active">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">Кристиночка, 21</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card card--top">
+							<div class="card__top-label is-active">ТОП</div>
+			
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-2.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">1</a>
+									<div class="card__status">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">Альбина, 26</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card card--top">
+							<div class="card__top-label is-active">ТОП</div>
+			
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-3.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">93</a>
+									<div class="card__status">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">Diana, 29</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card">
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-4.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">4 </a>
+									<div class="card__status is-active">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">LADY, 23</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card">
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-5.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">3</a>
+									<div class="card__status is-active">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">Angel, 27</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card">
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-6.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">12</a>
+									<div class="card__status is-active">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">Диана, 26</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card">
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-7.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">12</a>
+									<div class="card__status">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">Ксюха, 30</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+			
+					<!--	card item	-->
+					<div class="col-md-3 col-sm-4 col-6">
+						<div class="card">
+							<div class="card__picture">
+								<a href=""><img src="assets/img/jpg/photo-8.jpg" alt="" class="card__image"></a>
+			
+								<div class="card__infoblock">
+									<a class="card__pictures-counter" href="">12</a>
+									<div class="card__status is-active">Онлайн</div>
+								</div>
+							</div>
+			
+							<div class="card__description">
+								<a class="card__title" href="#">Тамара, 19</a>
+								<div class="card__location">Санкт-Петербург, Россия</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-12 pagination-wrap">
+					<ul class="pagination text-center" role="navigation">
+						<li class="pagination__item"><a href="#" class="pagination__link pagination-previous"><i class="icon icon-chevron-thin-left"></i></a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link is-active">1</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+						<li class="pagination__item"><a href="#" class="pagination__link pagination-next"><i class="icon icon-chevron-thin-right"></i></a></li>
+					</ul>
+				</div>
+			
+			</section>
+			
+		</main>
+		
+		<footer class="footer row">
+			<div class="col-12">
+				<nav class="footer__nav" role="navigation">
+					<ul class="footer__nav-list">
+						<li class="footer__nav-item"><a href="#" class="footer__nav-link">Правила</a></li>
+						<li class="footer__nav-item"><a href="#" class="footer__nav-link">Пользовательское соглашение</a></li>
+						<li class="footer__nav-item"><a href="#" class="footer__nav-link">О проекте</a></li>
+						<li class="footer__nav-item"><a href="#" class="footer__nav-link">Обратная связь</a></li>
+					</ul>
+				</nav>
+				
+				<div class="footer__license">
+					<p class="footer__license-para">© «KIKI». Лучший on-line сервис по поиску спонсоров и содержанок, 2015-2016</p>
+					<p class="footer__license-para">Администрация не несёт ответственности за размещённые анкеты - Вся информация на сайте предоставлена посетителями.</p>
+				</div>
+			</div>
+		</footer>
+		
+
+		<script src="assets/js/common.js"></script>
+		<script src="assets/js/app.js"></script>
+	</body>
+</html>
