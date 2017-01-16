@@ -1,0 +1,64 @@
+.btn {
+	display: inline-block;
+	border-radius: 4px;
+	border: none;
+	font-size: 14px;
+	cursor: pointer;
+	@include trs(0.1s);
+
+	&--main {
+		background-image: linear-gradient(225deg, $main-color 0%, $main-color-alt 100%);
+		color: #fff;
+		padding: 16px 25px;
+		text-transform: uppercase;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
+
+// Pagination bar
+.pagination {
+	&-wrap { text-align: center; }
+
+	display: inline-block;
+	background-color: $white;
+	border-radius: 4px;
+	padding: 7px;
+	
+	&__item {
+		display: inline-block;
+		font-size: 15px;
+		padding-right: 3px;
+		padding-left: 3px;
+		
+		@include breakpoint(350 down) {
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 0.1875rem 0.625rem;
+		size: 28px;
+		color: rgba($black, 0.5);
+		border-radius: 4px;
+		@include trs(0.15s);
+
+		&:hover:not(.is-active) {
+			background-color: rgba($main-color, 0.1);
+		}
+
+		&.is-active {
+			background-color: $main-color-alt;
+			color: #fff;
+
+			&:hover {
+				background-color: $main-color-alt;
+			}
+		}
+	}
+}

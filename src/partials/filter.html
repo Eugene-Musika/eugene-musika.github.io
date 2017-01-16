@@ -1,0 +1,67 @@
+<form action="#" name="filterSearch" class="filter row">
+	<div class="offset-lg-1 col-md-2 col-sm-4 filter__item">
+		<div class="filter__gender dropdown js_dropdown">
+			<div class="dropdown__viewbox filter__text-input">
+				<span class="dropdown__viewbox-text js_dropdown-text">Девушку</span>
+				<span class="filter__text-icon dropdown__icon icon icon-chevron-down-big"></span>
+			</div>
+		
+			<ul class="dropdown__items js_dropdown-list">
+				<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="gender" value="f" checked>Девушку</label></li>
+				<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="gender" value="m">Парня</label></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="filter__location col-lg-3 col-md-4 col-sm-8 filter__item">
+		<span class="input-reset-wrap">
+			<input type="text" class="filter__text-input input-reset__target js_input-reset__target filter__location-input" name="location" placeholder="Город, Страна" maxlength="30">
+			<button class="input-reset js_input-reset icon icon-cross"></button>
+		</span>
+	</div>
+
+	<div class="filter__divider filter__divider--small"></div>
+
+	<div class="filter__age col-lg-3 col-md-4 col-sm-7 filter__item">
+		Возраст
+		<input type="tel" name="minAge" class="filter__text-input filter__age-input" placeholder="от" pattern="\d+" maxlength="2">
+		<input type="tel" name="maxAge" class="filter__text-input filter__age-input" placeholder="до" pattern="\d+" maxlength="2">
+	</div>
+
+	<div class="filter__submit col-md-2 col-sm-5 filter__item">
+		<input type="submit" value="Найти" class="filter__submit-btn btn btn--main">
+	</div>
+	
+	<div class="filter__divider filter__divider--large"></div>
+
+	<div class="col-md-3 col-sm-8 filter__item">
+		<div class="filter__period">
+			<input type="radio" name="period" value="all" id="allPeriod" class="js_period-toggle" checked>
+			<label for="allPeriod" class="filter__period-toggle">Все</label>
+
+			<input type="radio" name="period" value="new" id="newPeriod" class="js_period-toggle">
+			<label for="newPeriod" class="filter__period-toggle">Новые</label>
+		</div>
+	</div>
+
+	<div class="col-md-2 col-sm-4 filter__item">
+		<div class="filter__period-more js_period-more dropdown js_dropdown">
+			<div class="dropdown__viewbox filter__text-input">
+				<span class="dropdown__viewbox-text js_dropdown-text">За сутки</span>
+				<span class="filter__text-icon dropdown__icon icon icon-chevron-down-big"></span>
+			</div>
+
+			<ul class="dropdown__items js_dropdown-list">
+				<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="periodMore" value="d" checked>За сутки</label></li>
+				<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="periodMore" value="w">За неделю</label></li>
+				<li class="dropdown__item"><label class="dropdown__link js_dropdown-link"><input type="radio" name="periodMore" value="m">За месяц</label></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="filter__divider filter__divider--small"></div>
+
+	<div class="filter__message-box col-md-7 filter__item">
+		<div class="filter__message">По вашему запросу никого не найдено, посмотрите пользователей которые могут вам понравиться</div>
+	</div>
+</form>

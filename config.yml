@@ -1,0 +1,114 @@
+# Server will run on localhost:[ PORT ]
+PORT: 8000
+
+# PostCSS plugins options
+POSTCSS:
+  # Autoprefixer settings
+  autoprefix:
+    browsers:
+      - "> 5%"
+      - "last 2 versions"
+      - "ie >= 9"
+      - "ios >= 7"
+  # BEM style settings
+  bem:
+    style: suit
+    separators:
+      namespace:  "_"
+      descendent: "__"
+      modifier:   "--"
+    shortcuts:
+      "component-namespace": namespace
+      component:  block
+      descendent: elem
+      modifier:   mod
+      utility:    u
+  # css-relative fonts directory for postcss-font-magician
+  fonts:
+    hosted: "../fonts/"
+  # px-to-rem convertor settings
+  pxtorem:
+    rootValue: 16
+    unitPrecision: 5
+    propWhiteList:
+      - font
+      - font-size
+      - line-height
+      - letter-spacing
+    selectorBlackList: []
+    replace: true,
+    mediaQuery: false,
+    minPixelValue: 0
+
+
+# UnCSS will use these settings
+UNCSS_OPTIONS:
+  html:
+    - "src/**/*.html"
+  ignore:
+    - !!js/regexp .foundation-mq
+    - !!js/regexp ^\.is-.*
+
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  # Path to dist folder
+  dist: "dist"
+  # Paths to static assets that aren't images, CSS, or JavaScript
+  assets:
+    - "src/assets/**/*"
+    - "!src/assets/{img,js,scss}/**/*"
+  # Paths to source HTML pages and components
+  panini:
+    root:     "src/pages/"
+    layouts:  "src/layouts/"
+    partials: "src/partials/"
+    data:     "src/data/"
+    helpers:  "src/helpers/"
+  # Paths to vendor Sass libraries, which can then be loaded with @import
+  sass:
+    - "node_modules/foundation-sites/scss/"
+    - "node_modules/motion-ui/src/"
+  # Paths to JavaScript libraries, which should be added to the head of html
+  jslibs:
+    # Babel libraries
+#    - "node_modules/babel-polyfill/dist/polyfill.min.js"
+#    # React libraries
+#    - "node_modules/react/dist/react-with-addons.min.js"
+#    - "node_modules/react-dom/dist/react-dom.min.js"
+  # Webpack
+  webpack:
+    - "src/assets/js/*.js"
+  # Paths to JavaScript libraries, which are compiled into one file
+  javascript:
+    # Libraries requried by Foundation
+    - "node_modules/foundation-sites/node_modules/jquery/dist/jquery.js"
+    - "node_modules/foundation-sites/node_modules/what-input/dist/what-input.js"
+    # Core Foundation files
+    - "node_modules/foundation-sites/js/foundation.core.js"
+    - "node_modules/foundation-sites/js/foundation.util.*.js"
+    # Individual Foundation components
+    # If you aren't using a component, just remove it from the list
+    - "node_modules/foundation-sites/js/foundation.abide.js"
+    - "node_modules/foundation-sites/js/foundation.accordion.js"
+    - "node_modules/foundation-sites/js/foundation.accordionMenu.js"
+    - "node_modules/foundation-sites/js/foundation.drilldown.js"
+    - "node_modules/foundation-sites/js/foundation.dropdown.js"
+    - "node_modules/foundation-sites/js/foundation.dropdownMenu.js"
+    - "node_modules/foundation-sites/js/foundation.equalizer.js"
+    - "node_modules/foundation-sites/js/foundation.interchange.js"
+    - "node_modules/foundation-sites/js/foundation.magellan.js"
+    - "node_modules/foundation-sites/js/foundation.offcanvas.js"
+    - "node_modules/foundation-sites/js/foundation.orbit.js"
+    - "node_modules/foundation-sites/js/foundation.responsiveMenu.js"
+    - "node_modules/foundation-sites/js/foundation.responsiveToggle.js"
+    - "node_modules/foundation-sites/js/foundation.reveal.js"
+    - "node_modules/foundation-sites/js/foundation.slider.js"
+    - "node_modules/foundation-sites/js/foundation.sticky.js"
+    - "node_modules/foundation-sites/js/foundation.tabs.js"
+    - "node_modules/foundation-sites/js/foundation.toggler.js"
+    - "node_modules/foundation-sites/js/foundation.tooltip.js"
+    - "node_modules/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
+    # Paths to your own project code are here
+    - "src/assets/js/!(app).js"
+    - "src/assets/js/app.js"

@@ -1,0 +1,125 @@
+//  Settings
+//  --------
+//
+//  Table of Contents:
+//
+//   1. Global
+//   2. Breakpoints
+//   3. Base Typography
+//   4. Hamburger Button
+//   5. Header settings
+
+@import 'util/util';
+
+
+// 1. Global
+// ---------
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 1.5;
+$foundation-palette: (
+	primary: #1779ba,
+	secondary: #767676,
+	success: #3adb76,
+	warning: #ffae00,
+	alert: #cc4b37,
+);
+$light-gray: #f5f6fa;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+$main-color: #4e92ff;
+$main-color-alt: #356bf7;
+$alt-color: #ff1e6c;
+$success-color: #19ef48;
+$primary-color: #0e43cb;
+$section-border-color: rgba($black, 0.1);
+$body-background: $white;
+$body-font-color: rgba($black, 0.8);
+$body-font-family: 'Roboto';
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+$global-radius: 0;
+$global-text-direction: ltr;
+$global-flexbox: false;
+$print-transparent-backgrounds: true;
+
+@include add-foundation-colors;
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+	small: 0,
+	medium: 768px,
+	large: 1024px,
+	xlarge: 1200px,
+	xxlarge: 1440px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large);
+
+
+// 4. Base Typography
+// ------------------
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-normal;
+$header-font-style: normal;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$header-color: inherit;
+$header-lineheight: 1.4;
+$header-margin-bottom: 0.5rem;
+$header-styles: (
+	small: (
+		'h1': ('font-size': 24),
+		'h2': ('font-size': 20),
+		'h3': ('font-size': 19),
+		'h4': ('font-size': 18),
+		'h5': ('font-size': 17),
+		'h6': ('font-size': 16),
+	),
+	medium: (
+		'h1': ('font-size': 48),
+		'h2': ('font-size': 40),
+		'h3': ('font-size': 31),
+		'h4': ('font-size': 25),
+		'h5': ('font-size': 20),
+		'h6': ('font-size': 16),
+	),
+);
+$header-text-rendering: optimizeLegibility;
+$paragraph-lineheight: 1.6;
+$paragraph-margin-bottom: 1rem;
+$paragraph-text-rendering: optimizeLegibility;
+$anchor-color: $main-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: +20%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+$list-lineheight: $paragraph-lineheight;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-type: none;
+
+
+// Hamburger Button
+// ----------------
+
+$hamburger-bar-width: 28px;
+$hamburger-bar-height: 2px;
+$hamburger-bar-spacing: 8px;
+$hamburger-color: $main-color;
+$hamburger-transition-duration: 200ms;
+
+
+// Header settings
+// ---------------
+
+$header-height: 80px;
+$header-height-mob: 60px;
+$header-gap: 30px;
+$header-gap-mob: 10px;

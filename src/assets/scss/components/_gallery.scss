@@ -1,0 +1,144 @@
+$card-infoblock-height: 40px;
+
+// Gallery
+.gallery {
+	background-color: $light-gray;
+	border-top: 1px solid $section-border-color;
+	border-bottom: 1px solid $section-border-color;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+// Card item
+.card {
+	z-index: 2;
+	background-color: $white;
+	border-radius: 12px;
+	border: 2px solid $light-gray;
+	overflow: hidden;
+	margin-bottom: 30px;
+	@include trs();
+
+	&:hover {
+		box-shadow: 0 0 15px $main-color;
+	}
+
+	&--top {
+		position: relative;
+		border-color: $alt-color;
+	}
+
+	&__top-label {
+		z-index: 1;
+		position: absolute;
+		top: 13px;
+		right: 13px;
+		size: 65px 24px;
+		font-size: 14px;
+		line-height: 25px;
+		border-radius: 4px;
+		background-color: $alt-color;
+		text-align: center;
+		color: $white;
+
+		@include breakpoint(450 down) {
+			$scale-coef: 0.7;
+
+			size: 65px * $scale-coef 24px * $scale-coef;
+			font-size: 14px * $scale-coef;
+			line-height: 25px * $scale-coef;
+			top: 13px * $scale-coef;
+			right: 13px * $scale-coef;
+		}
+	}
+
+	&__picture {
+		position: relative;
+	}
+
+	// Infoblock bar
+	&__infoblock {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: $card-infoblock-height;
+		background-color: rgba($black, 0.3);
+		padding-left: 15px;
+		padding-right: 15px;
+		line-height: $card-infoblock-height;
+
+		@include breakpoint(450 down) {
+			height: $card-infoblock-height * 0.7;
+			line-height: $card-infoblock-height * 0.7;
+		}
+	}
+
+	&__pictures-counter {
+		color: rgba($white, 0.8);
+		font-weight: 300;
+		cursor: pointer;
+		@include trs();
+
+		&:before {
+			display: inline-block;
+			vertical-align: top;
+			font-family: icomoon;
+			content: $icon-camera;
+			padding-right: 3px;
+		}
+
+		&:hover {
+			color: rgba($white, 1);
+		}
+
+		@include breakpoint(450 down) {
+			font-size: 14px;
+		}
+	}
+
+	&__status {
+		float: right;
+		color: rgba($success-color, 0.8);
+
+		&:not(.is-active) {
+			display: none;
+		}
+
+		@include breakpoint(450 down) {
+			font-size: 14px;
+		}
+	}
+
+
+	// card data
+	&__description {
+		padding: 10px 15px;
+	}
+
+	&__title {
+		font-size: 18px;
+		color: $main-color-alt;
+		@include trs(0.15s);
+
+		@include breakpoint(500 down) {
+			font-size: 16px;
+		}
+		@include breakpoint(400 down) {
+			font-size: 12px;
+		}
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+
+	&__location {
+		@include breakpoint(500 down) {
+			font-size: 14px;
+		}
+		@include breakpoint(400 down) {
+			font-size: 12px;
+		}
+	}
+}

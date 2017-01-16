@@ -1,0 +1,114 @@
+// If you want to add downloaded fonts, then uncoment lines below
+
+//@include font-face(Roboto, "Roboto-Regular");
+//@include font-face(Roboto, "Roboto-Black", black, normal);
+//@include font-face(Roboto, "Roboto-BlackItalic", black, italic);
+//@include font-face(Roboto, "Roboto-Bold", bold, normal);
+//@include font-face(Roboto, "Roboto-BoldItalic", bold, italic);
+//@include font-face(Roboto, "Roboto-Italic", medium, italic);
+//@include font-face(Roboto, "Roboto-Light", light, normal);
+//@include font-face(Roboto, "Roboto-LightItalic", light, italic);
+//@include font-face(Roboto, "Roboto-Medium", medium, normal);
+//@include font-face(Roboto, "Roboto-MediumItalic", medium, italic);
+//@include font-face(Roboto, "Roboto-Thin", thin, normal);
+//@include font-face(Roboto, "Roboto-ThinItalic", thin, italic);
+
+// But i think this is a better way to connect opensource fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&subset=cyrillic-ext');
+
+// Icon font
+// ---------
+
+@include font-face(icomoon, "icomoon");
+
+$icon-logo: "\e901";
+$icon-camera: "\e907";
+$icon-plus: "\e902";
+$icon-question-mark: "\e903";
+$icon-chevron-down: "\e909";
+$icon-chevron-thin-down: "\e904";
+$icon-chevron-thin-left: "\e908";
+$icon-chevron-thin-right: "\e906";
+$icon-chevron-thin-up: "\e900";
+$icon-cross: "\e905";
+
+.icon {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo {
+	&:before {
+		content: $icon-logo;
+	}
+}
+.icon-camera {
+	&:before {
+		content: $icon-camera;
+	}
+}
+.icon-plus {
+	&:before {
+		content: $icon-plus;
+		font-size: 10px;
+	}
+}
+.icon-question-mark {
+	&:before {
+		content: $icon-question-mark;
+		font-size: 12px;
+	}
+}
+.icon-chevron-down {
+	&:before {
+		content: $icon-chevron-down;
+		font-size: 18px;
+	}
+}
+.icon-chevron-down-big {
+	&:before {
+		content: $icon-chevron-down;
+		font-size: 24px;
+		line-height: 0.8;
+	}
+}
+.icon-chevron-thin-down {
+	&:before {
+		content: $icon-chevron-thin-down;
+	}
+}
+.icon-chevron-thin-left {
+	display: inline-block;
+	transform: translate(-25%, 15%);
+	&:before {
+		content: $icon-chevron-thin-left;
+	}
+}
+.icon-chevron-thin-right {
+	display: inline-block;
+	transform: translate(-25%, 15%);
+	&:before {
+		content: $icon-chevron-thin-right;
+	}
+}
+.icon-chevron-thin-up {
+	&:before {
+		content: $icon-chevron-thin-up;
+	}
+}
+.icon-cross {
+	&:before {
+		content: $icon-cross;
+		font-size: 20px;
+	}
+}

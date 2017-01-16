@@ -1,0 +1,80 @@
+$hamburger-bar-width: 28px !default;
+$hamburger-bar-height: 2px !default;
+$hamburger-bar-spacing: 8px !default;
+$hamburger-color: $main-color !default;
+$hamburger-transition-duration: 300ms !default;
+
+.hamburger-button {
+	@include breakpoint(medium) {
+		display: none;
+	}
+
+	position: absolute;
+	top: center;
+	right: 28px;
+	z-index: 1000;
+	width: $hamburger-bar-width;
+	height: $hamburger-bar-height + $hamburger-bar-spacing*2;
+
+	input[id="nav-menu-mobile-button"] {
+		position: absolute;
+		left: -9999px;
+		opacity: 0;
+	}
+
+	.hamburger-menu {
+		position: absolute;
+		width: $hamburger-bar-width;
+		height: $hamburger-bar-height + $hamburger-bar-spacing*2;
+		cursor: pointer;
+	}
+
+	.hamburger-bar,
+	.hamburger-bar:after,
+	.hamburger-bar:before {
+		width: $hamburger-bar-width;
+		height: $hamburger-bar-height;
+	}
+
+	.hamburger-bar {
+		position: relative;
+		background: $hamburger-color;
+		transition: all 0ms $hamburger-transition-duration;
+		transform: translateY($hamburger-bar-spacing);
+	}
+
+	.hamburger-bar:before {
+		position: absolute;
+		bottom: $hamburger-bar-spacing;
+		left: 0;
+		background: $hamburger-color;
+		content: "";
+		transition: bottom $hamburger-transition-duration $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1), transform $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.hamburger-bar:after {
+		position: absolute;
+		top: $hamburger-bar-spacing;
+		left: 0;
+		background: $hamburger-color;
+		content: "";
+		transition: top $hamburger-transition-duration $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1), transform $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	input[id="nav-menu-mobile-button"]:checked + .hamburger-menu {
+		.hamburger-bar {
+			background: transparentize($hamburger-color, 1);
+
+			&:after {
+				top: 0;
+				transition: top $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1), transform $hamburger-transition-duration $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1);
+				transform: rotate(45deg);;
+			}
+			&:before {
+				bottom: 0;
+				transition: bottom $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1), transform $hamburger-transition-duration $hamburger-transition-duration cubic-bezier(0.23, 1, 0.32, 1);
+				transform: rotate(-45deg);;
+			}
+		}
+	}
+}

@@ -1,0 +1,173 @@
+.header {
+	height: $header-height;
+	border-bottom: 1px solid rgba($black, 0.1);
+
+	@include breakpoint (small only) {
+		height: $header-height-mob;
+	}
+
+	&-wrap {
+		position: relative;
+	}
+
+	&__logo {
+		position: relative;
+		height: $header-height;
+		line-height: $header-height;
+		text-align: center;
+		font-size: 40px;
+		color: $main-color;
+		@include trs(0.15s);
+
+		&:hover {
+//			color: $main-color;
+//			opacity: 0.9;
+		}
+		
+		@include breakpoint (small only) {
+			height: $header-height-mob;
+			line-height: $header-height-mob;
+		}
+	}
+}
+
+// Menu styles
+.top-menu {
+	@include breakpoint(small only) {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		height: 0px;
+		z-index: 100;
+		background-color: #fff;
+		box-shadow: 0 5px 10px rgba($main-color, 0.5);
+		overflow: hidden;
+		@include trs();
+
+		&.is-active {
+			height: 200px;
+		}
+	}
+
+	// User info
+	&__info {
+		font-size: 14px;
+		position: absolute;
+		top: center;
+		right: 15px;
+
+		@include breakpoint (small only) {
+			position: static;
+			transform: none;
+			padding: 10px 15px 5px;
+			text-align: center;
+		}
+
+		&-item {
+			display: inline-block;
+			vertical-align: middle;
+
+			&:not(:first-child) {
+				margin-left: $header-gap;
+
+				@include breakpoint(400 down) {
+					margin-left: $header-gap-mob;
+				}
+			}
+		}
+
+		&-link {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			size: 20px;
+			text-align: center;
+			border: 1px solid transparent;
+			border-radius: 3px;
+			@include trs();
+
+			&:hover {
+				border-color: $main-color;
+			}
+
+			img {
+				left: center;
+				top: center;
+				transform: translate(-50%, -50%) rotate(180deg);
+			}
+		}
+	}
+
+	&__user {
+		&-img-link {
+			display: inline-block;
+			vertical-align: middle;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		
+		&-description {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+			margin-bottom: -2px;
+		}
+	}
+
+	// Navigation
+	&__nav {
+		@include breakpoint(medium) {
+			display: inline-block;
+			margin-top: 16px;
+			margin-left: 25px;
+		}
+
+		@include breakpoint(small only) {
+			margin-top: 6px;
+		}
+
+		&-item {
+			@include breakpoint(medium) {
+				display: inline-block;
+
+				&:not(:first-child) {
+					margin-left: $header-gap;
+				}
+			}
+		}
+		&-link {
+			display: inline-block;
+			position: relative;
+			color: $body-font-color;
+			padding: 10px 10px;
+
+			@include breakpoint(small only) {
+				display: block;
+				text-align: center;
+				border-top: 1px solid $section-border-color;
+			}
+
+			&:after {
+				display: block;
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0%;
+				height: 3px;
+				background-color: $main-color;
+				@include trs();
+			}
+
+			&.is-active,
+			&:hover {
+				&:after {
+					@include breakpoint(medium) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
